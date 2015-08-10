@@ -1,0 +1,20 @@
+.\objects\misc.o: ..\libraries\Drivers\src\misc.c
+.\objects\misc.o: ..\libraries\Drivers\inc\misc.h
+.\objects\misc.o: ..\libraries\CMSIS\stm32f4xx.h
+.\objects\misc.o: ..\libraries\CMSIS\core_cm4.h
+.\objects\misc.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\misc.o: ..\libraries\CMSIS\core_cmInstr.h
+.\objects\misc.o: ..\libraries\CMSIS\core_cmFunc.h
+.\objects\misc.o: ..\libraries\CMSIS\core_cm4_simd.h
+.\objects\misc.o: ..\libraries\CMSIS\system_stm32f4xx.h
+.\objects\misc.o: ..\program\stm32f4xx_conf.h
+.\objects\misc.o: ..\libraries\Drivers\inc\misc.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_dma.h
+.\objects\misc.o: ..\libraries\CMSIS\stm32f4xx.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_exti.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_gpio.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_rcc.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_spi.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_syscfg.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_tim.h
+.\objects\misc.o: ..\libraries\Drivers\inc\stm32f4xx_usart.h

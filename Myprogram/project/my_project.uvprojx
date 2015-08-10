@@ -457,6 +457,26 @@
               <FileType>1</FileType>
               <FilePath>..\libraries\Drivers\src\stm32f4xx_tim.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\Drivers\src\stm32f4xx_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\Drivers\src\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_syscfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\Drivers\src\stm32f4xx_syscfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\libraries\Drivers\src\stm32f4xx_spi.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -468,14 +488,59 @@
               <FilePath>..\program\drivers\led.c</FilePath>
             </File>
             <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\led.h</FilePath>
+            </File>
+            <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\program\drivers\usart.c</FilePath>
             </File>
             <File>
+              <FileName>usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\usart.h</FilePath>
+            </File>
+            <File>
               <FileName>pwm.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\program\drivers\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\pwm.h</FilePath>
+            </File>
+            <File>
+              <FileName>receive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\receive.c</FilePath>
+            </File>
+            <File>
+              <FileName>receive.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\receive.h</FilePath>
+            </File>
+            <File>
+              <FileName>at25512.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\at25512.c</FilePath>
+            </File>
+            <File>
+              <FileName>at25512.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\at25512.h</FilePath>
+            </File>
+            <File>
+              <FileName>w25q16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\w25q16.c</FilePath>
+            </File>
+            <File>
+              <FileName>w25q16.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\w25q16.h</FilePath>
             </File>
           </Files>
         </Group>

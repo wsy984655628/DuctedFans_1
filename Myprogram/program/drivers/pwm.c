@@ -8,7 +8,7 @@ void PwmInit(void)
 	TIM_TimeBaseInitTypeDef		TIM_TimeBaseStructure;
 	TIM_OCInitTypeDef		TIM_OCInitSTructure;
 	
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3,	ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,	ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 	
@@ -28,7 +28,7 @@ void PwmInit(void)
 	TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
 	TIM_TimeBaseStructure.TIM_CounterMode	=	TIM_CounterMode_Up;
 	TIM_TimeBaseStructure.TIM_Period = 5000;
-	TIM_TimeBaseStructure.TIM_Prescaler	= 84;
+	TIM_TimeBaseStructure.TIM_Prescaler	= 90;
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
 	
 	TIM_OCInitSTructure.TIM_OCMode = TIM_OCMode_PWM1;
@@ -45,3 +45,20 @@ void PwmInit(void)
 	
 
 }
+void Timer5Init(void)
+{
+	TIM_TimeBaseInitTypeDef	TIM_TimeBaseStructure;
+	
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);
+	
+	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseStructure.TIM_Period = 0xffffffff;
+	TIM_TimeBaseStructure.TIM_Prescaler = 90;
+	
+	TIM_TimeBaseInit(TIM5, &TIM_TimeBaseStructure);
+	TIM_ITConfig(TIM5,TIM_IT_Update,DISABLE);
+	TIM_Cmd(TIM5, ENABLE);
+	
+}
+
