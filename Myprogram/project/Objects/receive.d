@@ -2,7 +2,7 @@
 .\objects\receive.o: ..\program\drivers\receive.h
 .\objects\receive.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\receive.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\receive.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\receive.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\receive.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\receive.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\receive.o: ..\libraries\CMSIS\core_cm4_simd.h

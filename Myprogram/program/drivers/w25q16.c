@@ -1,6 +1,6 @@
 #include "w25q16.h"
 
-//
+//PB12-SPI2_NSS
 void W25Q16_SPI_GPIO_Config(void)
 {
 	GPIO_InitTypeDef	GPIO_InitStructure;	

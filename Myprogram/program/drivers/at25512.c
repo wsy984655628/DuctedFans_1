@@ -37,18 +37,57 @@ void SPI2_Init(void)
 	
 }
 
-//PD10-SPI2_NSS
+unsigned char SPI2_SendByte(unsigned char data)
+{
+	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE) == RESET);
+	SPI_SendData(SPI2, data);
+	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE) == RESET);
+	return SPI_ReceiveData(SPI2);
+}
+
+//PD10-SPI2_NSS2
 void AT25512_SPI_GPIO_Config(void)
 {
+	
 	GPIO_InitTypeDef	GPIO_InitStructure;	
 	
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
 	
-	GPIO_Init(GPIOB, &GPIO_InitStructure);	
+	GPIO_Init(GPIOD, &GPIO_InitStructure);	
+	AT25512_Raise_CS();
+}
+
+int AT25512_IsBusy(void)
+{
+	unsigned status=0;
+	AT25512_Lower_CS();
+	SPI2_SendByte(AT25512_RDSR);
+	status = AT25512_Read();
+	AT25512_Raise_CS();
+	if(status & 0x01)
+		return 1;
+	else
+		return 0;
+}
+
+void AT25512_ReadData(unsigned short Addr , unsigned char *data , unsigned char Len)
+{
+	int i=0;
+	AT25512_Lower_CS();
+	SPI2_SendByte(AT25512_READ);
+	SPI2_SendByte(Addr>>8);
+	SPI2_SendByte(Addr&0x0F);
+	for(i=0;i<Len;i++)
+		data[i]=AT25512_Read();
+	AT25512_Raise_CS();
+}
+void AT25512_PageWrite(unsigned short Addr , const unsigned char *data , unsigned char Len)
+{
+	
 }
