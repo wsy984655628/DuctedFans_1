@@ -3,11 +3,11 @@
 uint8_t USART_SendBuffer[USART_SendBuffer_Size]={0x11,0x22,0x33,0x44};
 uint8_t USART_ReceiveBuffer[USART_SendBuffer_Size+100];
 
-void USART_DT_Config(void)
+void USART2_DT_Config(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	USART_InitTypeDef USART_InitStructure;
-	//NVIC_InitTypeDef	NVIC_InitStructure;
+	NVIC_InitTypeDef	NVIC_InitStructure;
 	DMA_InitTypeDef	DMA_InitStructure;
 	
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2,ENABLE);
@@ -26,13 +26,15 @@ void USART_DT_Config(void)
 	GPIO_Init(GPIOD,&GPIO_InitStructure);
 	
 	//configure the usart2
-	USART_InitStructure.USART_BaudRate=9600;
+	USART_InitStructure.USART_BaudRate=115200;
 	USART_InitStructure.USART_HardwareFlowControl=USART_HardwareFlowControl_None;
 	USART_InitStructure.USART_Mode=USART_Mode_Rx | USART_Mode_Tx;
 	USART_InitStructure.USART_Parity=USART_Parity_No;
 	USART_InitStructure.USART_StopBits=USART_StopBits_1;
 	USART_InitStructure.USART_WordLength=USART_WordLength_8b;
 	USART_Init(USART2, &USART_InitStructure);
+	
+	USART_Cmd(USART2,ENABLE);
 	
 	//configure the tx dma
 	DMA_InitStructure.DMA_BufferSize=USART_SendBuffer_Size;
@@ -60,14 +62,49 @@ void USART_DT_Config(void)
 	DMA_Init(DMA1_Stream5,&DMA_InitStructure);
 	
 	//DMA command
-	USART_Cmd(USART2,ENABLE);
+//	USART_DMACmd(USART2,USART_DMAReq_Tx,ENABLE);
+//	USART_DMACmd(USART2,USART_DMAReq_Rx,ENABLE);
+	
+	
 	DMA_Cmd(DMA1_Stream6,ENABLE);
-	USART_DMACmd(USART2,USART_DMAReq_Tx,ENABLE);
-	USART_DMACmd(USART2,USART_DMAReq_Rx,ENABLE);
+//	//enable the USART2 Interrupt
+//	USART_ITConfig(USART2,USART_IT_TC,ENABLE);
+//	USART_ITConfig(USART2,USART_IT_RXNE,ENABLE);
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+//	NVIC_InitStructure.NVIC_IRQChannel=USART2_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
+//	NVIC_Init(&NVIC_InitStructure);
+//	
+//	//enable the tx DMA interrupt
+//	DMA_ITConfig(DMA1_Stream6,DMA_IT_TC,ENABLE);
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+//	NVIC_InitStructure.NVIC_IRQChannel=DMA1_Stream6_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
+//	NVIC_Init(&NVIC_InitStructure);	
+//	
+//	//enable the rx DMA interrupt
+//	DMA_ITConfig(DMA1_Stream5,DMA_IT_TC,ENABLE);
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+//	NVIC_InitStructure.NVIC_IRQChannel=DMA1_Stream5_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
+//	NVIC_Init(&NVIC_InitStructure);		
 }
 
+void USART2_DMA_SendData(void)
+{
+	DMA_Cmd(DMA1_Stream6,ENABLE);
+}
 
-
+void USART2_DMA_ReceiveData(void)
+{
+	DMA_Cmd(DMA1_Stream5,ENABLE);
+}
 
 
 

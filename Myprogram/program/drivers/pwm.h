@@ -5,7 +5,7 @@
 
 #define SYS_TIME (TIM5->CNT)
 
-extern uint16_t ch;
+extern uint16_t ch[6];
 void PwmInit(void);
 void Timer5Init(void);
 

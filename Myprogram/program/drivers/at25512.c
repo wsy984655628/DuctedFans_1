@@ -89,5 +89,21 @@ void AT25512_ReadData(unsigned short Addr , unsigned char *data , unsigned char 
 }
 void AT25512_PageWrite(unsigned short Addr , const unsigned char *data , unsigned char Len)
 {
+	int i=0;
+	AT25512_Lower_CS();
+	SPI2_SendByte(AT25512_WRSR);
+	SPI2_SendByte(0x00);
+	AT25512_Raise_CS();
 	
+	AT25512_Lower_CS();
+	SPI2_SendByte(AT25512_WREN);
+	AT25512_Raise_CS();
+	
+	AT25512_Lower_CS();
+	SPI2_SendByte(AT25512_WRITE);
+	SPI2_SendByte(Addr>>8);
+	SPI2_SendByte(Addr&0xFF);
+	for(i=0;i<Len;i++)
+		SPI2_SendByte(data[i]);
+	AT25512_Raise_CS();
 }

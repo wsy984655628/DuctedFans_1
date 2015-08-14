@@ -9,7 +9,9 @@
 extern uint8_t USART_SendBuffer[USART_SendBuffer_Size];
 extern uint8_t USART_ReceiveBuffer[USART_SendBuffer_Size+100];
 
-void USART_DT_Config(void);
+void USART2_DT_Config(void);
+void USART2_DMA_SendData(void);
+void USART2_DMA_ReceiveData(void);
 int fputc(int ch, FILE *f);
 int fgetc(FILE *f);
 

@@ -2,7 +2,7 @@
 .\objects\pwm.o: ..\program\drivers\pwm.h
 .\objects\pwm.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\pwm.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\pwm.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pwm.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\pwm.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\pwm.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\pwm.o: ..\libraries\CMSIS\core_cm4_simd.h
