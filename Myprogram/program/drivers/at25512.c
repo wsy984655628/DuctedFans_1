@@ -82,7 +82,7 @@ void AT25512_ReadData(unsigned short Addr , unsigned char *data , unsigned char 
 	AT25512_Lower_CS();
 	SPI2_SendByte(AT25512_READ);
 	SPI2_SendByte(Addr>>8);
-	SPI2_SendByte(Addr&0x0F);
+	SPI2_SendByte(Addr&0xFF);
 	for(i=0;i<Len;i++)
 		data[i]=AT25512_Read();
 	AT25512_Raise_CS();

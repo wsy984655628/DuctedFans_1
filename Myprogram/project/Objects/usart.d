@@ -19,3 +19,4 @@
 .\objects\usart.o: ..\libraries\Drivers\inc\stm32f4xx_tim.h
 .\objects\usart.o: ..\libraries\Drivers\inc\stm32f4xx_usart.h
 .\objects\usart.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usart.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\string.h

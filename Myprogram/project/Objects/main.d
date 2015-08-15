@@ -22,6 +22,7 @@
 .\objects\main.o: ..\program\drivers\led.h
 .\objects\main.o: ..\program\drivers\usart.h
 .\objects\main.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: ..\program\drivers\pwm.h
 .\objects\main.o: ..\program\drivers\receive.h
 .\objects\main.o: ..\program\drivers\w25q16.h

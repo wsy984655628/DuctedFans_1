@@ -62,38 +62,39 @@ void USART2_DT_Config(void)
 	DMA_Init(DMA1_Stream5,&DMA_InitStructure);
 	
 	//DMA command
-//	USART_DMACmd(USART2,USART_DMAReq_Tx,ENABLE);
-//	USART_DMACmd(USART2,USART_DMAReq_Rx,ENABLE);
+	USART_DMACmd(USART2,USART_DMAReq_Tx,ENABLE);
+	USART_DMACmd(USART2,USART_DMAReq_Rx,ENABLE);
 	
+	//enable the USART2 Interrupt
+	USART_ITConfig(USART2,USART_IT_TC,ENABLE);
+	USART_ITConfig(USART2,USART_IT_RXNE,ENABLE);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	NVIC_InitStructure.NVIC_IRQChannel=USART2_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
+	NVIC_Init(&NVIC_InitStructure);
 	
-	DMA_Cmd(DMA1_Stream6,ENABLE);
-//	//enable the USART2 Interrupt
-//	USART_ITConfig(USART2,USART_IT_TC,ENABLE);
-//	USART_ITConfig(USART2,USART_IT_RXNE,ENABLE);
-//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-//	NVIC_InitStructure.NVIC_IRQChannel=USART2_IRQn;
-//	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
-//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
-//	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
-//	NVIC_Init(&NVIC_InitStructure);
-//	
-//	//enable the tx DMA interrupt
-//	DMA_ITConfig(DMA1_Stream6,DMA_IT_TC,ENABLE);
-//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-//	NVIC_InitStructure.NVIC_IRQChannel=DMA1_Stream6_IRQn;
-//	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
-//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
-//	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
-//	NVIC_Init(&NVIC_InitStructure);	
-//	
-//	//enable the rx DMA interrupt
-//	DMA_ITConfig(DMA1_Stream5,DMA_IT_TC,ENABLE);
-//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-//	NVIC_InitStructure.NVIC_IRQChannel=DMA1_Stream5_IRQn;
-//	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
-//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
-//	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
-//	NVIC_Init(&NVIC_InitStructure);		
+	//enable the tx DMA interrupt
+	DMA_ITConfig(DMA1_Stream6,DMA_IT_TC,ENABLE);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	NVIC_InitStructure.NVIC_IRQChannel=DMA1_Stream6_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
+	NVIC_Init(&NVIC_InitStructure);	
+	
+	//enable the rx DMA interrupt
+	DMA_ITConfig(DMA1_Stream5,DMA_IT_TC,ENABLE);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	NVIC_InitStructure.NVIC_IRQChannel=DMA1_Stream5_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd=ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority=1;
+	NVIC_Init(&NVIC_InitStructure);		
+	
+	//enable the rx dma
+	DMA_Cmd(DMA1_Stream5,ENABLE);
 }
 
 void USART2_DMA_SendData(void)
@@ -106,27 +107,14 @@ void USART2_DMA_ReceiveData(void)
 	DMA_Cmd(DMA1_Stream5,ENABLE);
 }
 
-
-
-
-
-int fputc(int ch, FILE *f)
+void USART2_Print( const char *str )
 {
-		/* 发送一个字节数据到USART2 */
-		USART_SendData(USART2, (uint8_t) ch);
-		
-		/* 等待发送完毕 */
-		while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET);		
-	
-		return (ch);
-}
-
-/// 重定向c库函数scanf到USART1
-int fgetc(FILE *f)
-{
-		/* 等待串口1输入数据 */
-		while (USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == RESET);
-
-		return (int)USART_ReceiveData(USART2);
+    int Len = strlen(str);
+    int i=0;
+    for(i=0;i<Len;i++)
+    {
+        while( RESET == USART_GetFlagStatus(USART2,USART_FLAG_TXE));
+        USART_SendData(USART2,(uint16_t)str[i]);
+    }
 }
 

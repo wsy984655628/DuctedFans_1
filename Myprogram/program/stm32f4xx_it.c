@@ -139,27 +139,27 @@ void EXTI15_10_IRQHandler(void)
 	}
 }
 
-//void DMA1_Stream6_IRQHandler(void)
-//{
-//	if(DMA_GetITStatus(DMA1_Stream6,DMA_IT_TCIF6)==SET)
-//	{
-//		DMA_ClearITPendingBit(DMA1_Stream6,DMA_IT_TCIF6);
-//		DMA_Cmd(DMA1_Stream6,DISABLE);
-//	}
-//}
-//void DMA1_Stream5_IRQHandler(void)
-//{
-//	if(DMA_GetITStatus(DMA1_Stream6,DMA_IT_TCIF5)==SET)
-//	{
-//		DMA_ClearITPendingBit(DMA1_Stream6,DMA_IT_TCIF5);
-//		USART2_DMA_ReceiveData();
-//	}	
-//}
-//void USART2_IRQHandler(void)
-//{
-//	if(USART_GetITStatus(USART2,USART_IT_TC)==SET)
-//		USART_ClearITPendingBit(USART2,USART_IT_TC);
-//	if(USART_GetITStatus(USART2,USART_IT_RXNE)==SET)
-//		USART_ClearITPendingBit(USART2,USART_IT_RXNE);	
-//}
+void DMA1_Stream6_IRQHandler(void)
+{
+	if(DMA_GetITStatus(DMA1_Stream6,DMA_IT_TCIF6)==SET)
+	{
+		DMA_ClearITPendingBit(DMA1_Stream6,DMA_IT_TCIF6);
+		DMA_Cmd(DMA1_Stream6,DISABLE);
+	}
+}
+void DMA1_Stream5_IRQHandler(void)
+{
+	if(DMA_GetITStatus(DMA1_Stream6,DMA_IT_TCIF5)==SET)
+	{
+		DMA_ClearITPendingBit(DMA1_Stream6,DMA_IT_TCIF5);
+		USART2_DMA_ReceiveData();
+	}	
+}
+void USART2_IRQHandler(void)
+{
+	if(USART_GetITStatus(USART2,USART_IT_TC)==SET)
+		USART_ClearITPendingBit(USART2,USART_IT_TC);
+	if(USART_GetITStatus(USART2,USART_IT_RXNE)==SET)
+		USART_ClearITPendingBit(USART2,USART_IT_RXNE);	
+}
 

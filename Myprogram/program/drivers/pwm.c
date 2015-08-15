@@ -1,6 +1,7 @@
 #include "pwm.h"
 
 uint16_t ch[6]={0,1500,1500,1500,1500,1000};
+ 
 
 void PwmInit(void)
 {
@@ -28,7 +29,7 @@ void PwmInit(void)
 	TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
 	TIM_TimeBaseStructure.TIM_CounterMode	=	TIM_CounterMode_Up;
 	TIM_TimeBaseStructure.TIM_Period = 5000;
-	TIM_TimeBaseStructure.TIM_Prescaler	= 90;
+	TIM_TimeBaseStructure.TIM_Prescaler	= 45;
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
 	
 	//TIM2:Channel 1
