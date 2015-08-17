@@ -32,7 +32,7 @@
 #include "receive.h"
 #include "pwm.h"
 #include "usart.h"
-
+#include "main.h"
 /** @addtogroup Template_Project
   * @{
   */
@@ -163,3 +163,9 @@ void USART2_IRQHandler(void)
 		USART_ClearITPendingBit(USART2,USART_IT_RXNE);	
 }
 
+void TIM3_IRQHandler(void)
+{
+	TIM_ClearITPendingBit(TIM3,TIM_IT_Update);
+
+	MainInterrupt();
+}	

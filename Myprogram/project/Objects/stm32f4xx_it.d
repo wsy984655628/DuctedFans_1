@@ -23,3 +23,4 @@
 .\objects\stm32f4xx_it.o: ..\program\drivers\usart.h
 .\objects\stm32f4xx_it.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\stm32f4xx_it.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\stm32f4xx_it.o: ..\program\main.h

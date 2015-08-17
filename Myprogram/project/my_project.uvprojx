@@ -542,6 +542,36 @@
               <FileType>5</FileType>
               <FilePath>..\program\drivers\w25q16.h</FilePath>
             </File>
+            <File>
+              <FileName>mpu9250.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\mpu9250.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu9250.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\mpu9250.h</FilePath>
+            </File>
+            <File>
+              <FileName>ms5803.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\ms5803.c</FilePath>
+            </File>
+            <File>
+              <FileName>ms5803.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\ms5803.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\mavlink.c</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\mavlink.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -553,9 +583,19 @@
               <FilePath>..\program\main.c</FilePath>
             </File>
             <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\main.h</FilePath>
+            </File>
+            <File>
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\program\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\stm32f4xx_it.h</FilePath>
             </File>
           </Files>
         </Group>

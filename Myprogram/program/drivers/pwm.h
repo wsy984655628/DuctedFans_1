@@ -8,5 +8,6 @@
 extern uint16_t ch[6];
 void PwmInit(void);
 void Timer5Init(void);
+void Timer3Init(void);
 
 #endif

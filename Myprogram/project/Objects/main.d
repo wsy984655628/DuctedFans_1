@@ -27,3 +27,4 @@
 .\objects\main.o: ..\program\drivers\receive.h
 .\objects\main.o: ..\program\drivers\w25q16.h
 .\objects\main.o: ..\program\drivers\at25512.h
+.\objects\main.o: ..\program\drivers\mavlink.h
