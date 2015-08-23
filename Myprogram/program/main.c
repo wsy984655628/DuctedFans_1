@@ -7,8 +7,6 @@
 #include "receive.h"
 #include "w25q16.h"
 #include "at25512.h"
-#include "mavlink.h"
-
 
 static void Delay(__IO u32 nCount); 
 int main()
@@ -41,8 +39,10 @@ void MainInterrupt(void)
 //			LED1(OFF);
 //			Delay(0xFFFFF);
 //		}
-	Get_Mavlink_Info();
-	Send_Mavlink_Info();
+	
+	
+//	Get_Mavlink_Info();
+//	Send_Mavlink_Info();
 }
 
 static void Delay(__IO uint32_t nCount)	 
