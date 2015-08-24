@@ -2,7 +2,7 @@
 .\objects\struct_all.o: ..\program\drivers\struct_all.h
 .\objects\struct_all.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\struct_all.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\struct_all.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\struct_all.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\struct_all.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\struct_all.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\struct_all.o: ..\libraries\CMSIS\core_cm4_simd.h

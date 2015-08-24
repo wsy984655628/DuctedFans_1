@@ -2,7 +2,7 @@
 .\objects\stm32f4xx_it.o: ..\program\stm32f4xx_it.h
 .\objects\stm32f4xx_it.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\stm32f4xx_it.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\stm32f4xx_it.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_it.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f4xx_it.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\stm32f4xx_it.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\stm32f4xx_it.o: ..\libraries\CMSIS\core_cm4_simd.h
@@ -21,6 +21,6 @@
 .\objects\stm32f4xx_it.o: ..\program\drivers\receive.h
 .\objects\stm32f4xx_it.o: ..\program\drivers\pwm.h
 .\objects\stm32f4xx_it.o: ..\program\drivers\usart.h
-.\objects\stm32f4xx_it.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\stm32f4xx_it.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\stm32f4xx_it.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\stm32f4xx_it.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
 .\objects\stm32f4xx_it.o: ..\program\main.h

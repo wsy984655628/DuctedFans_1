@@ -2,7 +2,7 @@
 .\objects\w25q16.o: ..\program\drivers\w25q16.h
 .\objects\w25q16.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\w25q16.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\w25q16.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\w25q16.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\w25q16.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\w25q16.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\w25q16.o: ..\libraries\CMSIS\core_cm4_simd.h

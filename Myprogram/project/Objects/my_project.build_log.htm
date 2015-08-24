@@ -3,13 +3,13 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.14.1
+IDE-Version: ¦ÌVision V5.14.0.0
 Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Cortex-M4, aa, LIC=65IVE-5GDYK-PCYJ8-3ZZEI-3FT8E-YAIHL
+License Information: 123 123, 123, LIC=03C45-G751K-008N9-4H5IC-IIFFS-8W5Y0
  
 Tool Versions:
 Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
-Toolchain Path:  D:\Program Files\Keil v5\ARM\ARMCC\Bin
+Toolchain Path:  C:\Program Files\Keil\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.05 update 1 (build 106)
 Assembler:       Armasm.exe V5.05 update 1 (build 106)
 Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
@@ -21,32 +21,24 @@ Target DLL:      Segger\JL2CM3.dll V2.99.13.0
 Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
-F:\GitHub\DuctedFans_1\Myprogram\project\my_project.uvprojx
+C:\Users\Siyua_000\Documents\GitHub\DuctedFans_1\Myprogram\project\my_project.uvprojx
 Project File Date:  08/24/2015
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'D:\Program Files\Keil v5\ARM\ARMCC\Bin'
-Rebuild target 'Target 1'
-assembling startup_stm32f427xx.s...
-compiling system_stm32f4xx.c...
-compiling stm32f4xx_gpio.c...
-compiling stm32f4xx_rcc.c...
-compiling stm32f4xx_usart.c...
-compiling stm32f4xx_dma.c...
-compiling stm32f4xx_tim.c...
-compiling stm32f4xx_exti.c...
-compiling misc.c...
-compiling stm32f4xx_syscfg.c...
-compiling stm32f4xx_spi.c...
-compiling led.c...
-compiling usart.c...
-compiling pwm.c...
-compiling receive.c...
-compiling at25512.c...
-compiling w25q16.c...
-compiling mpu9250.c...
+Build target 'Target 1'
 compiling ms5803.c...
-compiling MavlinkProtocol.c...
+..\program\drivers\ms5803.c(193): warning:  #940-D: missing return statement at end of non-void function "MS5803_CRC_Calc"
+  }
+..\program\drivers\ms5803.c(229): warning:  #1-D: last line of file ends without a newline
+  }
+..\program\drivers\ms5803.c(197): warning:  #550-D: variable "P" was set but never used
+        int64_t dT,TEMP,OFF,SENS,P;
+..\program\drivers\ms5803.c(198): warning:  #177-D: variable "TEMP2" was declared but never referenced
+        int64_t T2,TEMP2,OFF2,SENS2,P2;
+..\program\drivers\ms5803.c(198): warning:  #177-D: variable "P2" was declared but never referenced
+        int64_t T2,TEMP2,OFF2,SENS2,P2;
+..\program\drivers\ms5803.c: 5 warnings, 0 errors
+compiling main.c...
 ..\program\mavlink\common\../mavlink_conversions.h(80): warning:  #167-D: argument of type "float (*)[3]" is incompatible with parameter of type "const float (*)[3]"
       mavlink_dcm_to_euler(dcm, roll, pitch, yaw);
 ..\program\mavlink\common\./mavlink_msg_heartbeat.h(255): warning:  #191-D: type qualifier is meaningless on cast type
@@ -329,23 +321,17 @@ compiling MavlinkProtocol.c...
         return _MAV_RETURN_uint8_t(msg,  0);
 ..\program\mavlink\common\./mavlink_msg_debug.h(229): warning:  #191-D: type qualifier is meaningless on cast type
         return _MAV_RETURN_uint8_t(msg,  8);
-..\program\drivers\MavlinkProtocol.c(18): warning:  #550-D: variable "len" was set but never used
-        uint16_t len;
-..\program\drivers\MavlinkProtocol.c: 142 warnings, 0 errors
-compiling struct_all.c...
-compiling main.c...
-..\program\main.c(48): warning:  #177-D: function "Delay" was declared but never referenced
+..\program\main.c(52): warning:  #177-D: function "Delay" was declared but never referenced
   static void Delay(__IO uint32_t nCount)        
-..\program\main.c: 1 warning, 0 errors
-compiling stm32f4xx_it.c...
+..\program\main.c: 142 warnings, 0 errors
 linking...
 Program Size: Code=5592 RO-data=460 RW-data=236 ZI-data=1988  
 FromELF: creating hex file...
-".\Objects\my_project.axf" - 0 Error(s), 143 Warning(s).
+".\Objects\my_project.axf" - 0 Error(s), 147 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  F:\GitHub\DuctedFans_1\Myprogram\project\RTE
-  D:\Program Files\Keil v5\ARM\PACK\Keil\STM32F4xx_DFP\2.4.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  C:\Users\Siyua_000\Documents\GitHub\DuctedFans_1\Myprogram\project\RTE
+  C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.4.0
 
 <h2>Collection of Component Files used:</h2>
 </pre>
