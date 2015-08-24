@@ -7,6 +7,10 @@
 #include "receive.h"
 #include "w25q16.h"
 #include "at25512.h"
+#include "ms5803.h"
+#include "mpu9250.h"
+#include "struct_all.h"
+#include "MavlinkProtocol.h"
 
 static void Delay(__IO u32 nCount); 
 int main()

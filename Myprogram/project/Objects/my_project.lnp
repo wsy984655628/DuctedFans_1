@@ -19,6 +19,7 @@
 ".\objects\mpu9250.o"
 ".\objects\ms5803.o"
 ".\objects\mavlinkprotocol.o"
+".\objects\struct_all.o"
 ".\objects\main.o"
 ".\objects\stm32f4xx_it.o"
 --ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols

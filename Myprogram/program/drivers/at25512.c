@@ -22,7 +22,7 @@ void SPI2_Init(void)
 	GPIO_PinAFConfig(GPIOB,GPIO_PinSource14, GPIO_AF_SPI2);
 	GPIO_PinAFConfig(GPIOB,GPIO_PinSource15, GPIO_AF_SPI2);
 	
-	SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_32;
+	SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_64;
 	SPI_InitStructure.SPI_CPHA = SPI_CPHA_2Edge;
 	SPI_InitStructure.SPI_CPOL = SPI_CPOL_High;
 	SPI_InitStructure.SPI_CRCPolynomial = 7;
