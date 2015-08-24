@@ -122,7 +122,7 @@ void Timer3Init(void)
 	
 	TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
 	TIM_ITConfig(TIM3,TIM_IT_Update,ENABLE);
-	TIM_Cmd(TIM5, ENABLE);
+	TIM_Cmd(TIM3, ENABLE);
 	
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	NVIC_InitStructure.NVIC_IRQChannel=TIM3_IRQn;

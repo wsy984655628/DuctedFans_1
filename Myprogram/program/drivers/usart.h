@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define USART_SendBuffer_Size 10
+#define USART_SendBuffer_Size 200
 
 extern uint8_t USART_SendBuffer[USART_SendBuffer_Size];
 extern uint8_t USART_ReceiveBuffer[USART_SendBuffer_Size+100];

@@ -907,17 +907,18 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\objects\startup_stm32f427xx.d -o.\objects\startup_stm32f427xx
-.o -IF:\GitHub\DuctedFans_1\Myprogram\project\RTE -I"D:\Program Files\Keil v5\A
+.o -IC:\Users\Siyua_000\Documents\GitHub\DuctedFans_1\Myprogram\project\RTE -I"
 
 
 
 ARM Macro Assembler    Page 15 
 
 
-RM\PACK\Keil\STM32F4xx_DFP\2.4.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include" -I"
-D:\Program Files\Keil v5\ARM\CMSIS\Include" --predefine="__UVISION_VERSION SETA
- 514" --predefine="STM32F427xx SETA 1" --list=.\listings\startup_stm32f427xx.ls
-t ..\libraries\CMSIS\startup_stm32f427xx.s
+C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.4.0" -I"C:\Program Files\Ke
+il\ARM\CMSIS\Include" -I"C:\Program Files\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.4.
+0\Drivers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__UVISION_VERSION SET
+A 514" --predefine="STM32F427xx SETA 1" --list=.\listings\startup_stm32f427xx.l
+st ..\libraries\CMSIS\startup_stm32f427xx.s
 
 
 

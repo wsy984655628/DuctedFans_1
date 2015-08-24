@@ -2,7 +2,7 @@
 .\objects\at25512.o: ..\program\drivers\at25512.h
 .\objects\at25512.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\at25512.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\at25512.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\at25512.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\at25512.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\at25512.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\at25512.o: ..\libraries\CMSIS\core_cm4_simd.h

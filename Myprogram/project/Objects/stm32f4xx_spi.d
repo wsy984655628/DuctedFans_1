@@ -2,7 +2,7 @@
 .\objects\stm32f4xx_spi.o: ..\libraries\Drivers\inc\stm32f4xx_spi.h
 .\objects\stm32f4xx_spi.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\stm32f4xx_spi.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\stm32f4xx_spi.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f4xx_spi.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f4xx_spi.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\stm32f4xx_spi.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\stm32f4xx_spi.o: ..\libraries\CMSIS\core_cm4_simd.h

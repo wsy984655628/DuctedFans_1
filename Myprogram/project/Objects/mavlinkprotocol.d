@@ -2,7 +2,7 @@
 .\objects\mavlinkprotocol.o: ..\program\drivers\MavlinkProtocol.h
 .\objects\mavlinkprotocol.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\mavlinkprotocol.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\mavlinkprotocol.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\mavlinkprotocol.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\mavlinkprotocol.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\mavlinkprotocol.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\mavlinkprotocol.o: ..\libraries\CMSIS\core_cm4_simd.h
@@ -22,13 +22,13 @@
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\version.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\common.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\../protocol.h
-.\objects\mavlinkprotocol.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\mavlinkprotocol.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\string.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\../mavlink_types.h
-.\objects\mavlinkprotocol.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\inttypes.h
+.\objects\mavlinkprotocol.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\inttypes.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\../mavlink_helpers.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\../checksum.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\../mavlink_conversions.h
-.\objects\mavlinkprotocol.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\mavlinkprotocol.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\math.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\./mavlink_msg_heartbeat.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\./mavlink_msg_sys_status.h
 .\objects\mavlinkprotocol.o: ..\program\mavlink\common\./mavlink_msg_system_time.h
