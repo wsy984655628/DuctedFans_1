@@ -6,11 +6,12 @@
 
 void MPU9250_Config(void);
 void MPU9250_SPI_GPIO_Config(void);
+void MPU9250_INT_GPIO_Config(void);
+
 void MPU9250_DataRegion_Config(void);
 unsigned char MPU9250_WriteReg(unsigned char RegAddr , unsigned char Data);
 void MPU9250_GetData(void);
-void MPU9250_INT_GPIO_Config(void);
-
+void MPU9250_Filter(void);
 
 extern unsigned char MPU9250_OriData_Cache[14];
 extern unsigned short MPU9250_Data_Cache[7];

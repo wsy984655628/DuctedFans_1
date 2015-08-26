@@ -2,7 +2,7 @@
 .\objects\ms5803.o: ..\program\drivers\ms5803.h
 .\objects\ms5803.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\ms5803.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\ms5803.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ms5803.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\ms5803.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\ms5803.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\ms5803.o: ..\libraries\CMSIS\core_cm4_simd.h

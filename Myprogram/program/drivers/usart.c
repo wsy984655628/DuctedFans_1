@@ -97,8 +97,17 @@ void USART2_DT_Config(void)
 	DMA_Cmd(DMA1_Stream5,ENABLE);
 }
 
-void USART2_DMA_SendData(void)
+void USART2_DMA_SendData(uint8_t *pAddr,uint32_t len)
 {
+	DMA_Cmd(DMA1_Stream6,DISABLE);
+	
+	DMA_DeInit(DMA1_Stream6);
+	DMA_InitTypeDef	DMA_InitStructure;
+	DMA_InitStructure.DMA_BufferSize=len;
+	DMA_InitStructure.DMA_Memory0BaseAddr=(uint32_t)pAddr;
+	DMA_Init(DMA1_Stream6, &DMA_InitStructure);
+	DMA_ITConfig(DMA1_Stream6 , DMA_IT_TC,ENABLE);
+	
 	DMA_Cmd(DMA1_Stream6,ENABLE);
 }
 

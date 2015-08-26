@@ -2,7 +2,7 @@
 .\objects\misc.o: ..\libraries\Drivers\inc\misc.h
 .\objects\misc.o: ..\libraries\CMSIS\stm32f4xx.h
 .\objects\misc.o: ..\libraries\CMSIS\core_cm4.h
-.\objects\misc.o: C:\Program Files\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\misc.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\misc.o: ..\libraries\CMSIS\core_cmInstr.h
 .\objects\misc.o: ..\libraries\CMSIS\core_cmFunc.h
 .\objects\misc.o: ..\libraries\CMSIS\core_cm4_simd.h

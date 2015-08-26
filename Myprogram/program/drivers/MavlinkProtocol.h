@@ -9,6 +9,7 @@
 #pragma anon_unions
 #include "mavlink.h"
 
-
+void mavlink_int(void);
+void mavlink_message(void);
 
 #endif

@@ -91,6 +91,7 @@ void PwmInit(void)
 	TIM_ARRPreloadConfig(TIM4, ENABLE);
 	TIM_Cmd(TIM4, ENABLE);
 }
+//for receive time calculate
 void Timer5Init(void)
 {
 	TIM_TimeBaseInitTypeDef	TIM_TimeBaseStructure;

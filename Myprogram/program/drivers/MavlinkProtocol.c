@@ -42,7 +42,7 @@ void mavlink_message(void)
 						1.0,
 						1.0);
 			len = mavlink_msg_to_send_buffer(USART_SendBuffer, &msg);
-			USART2_DMA_SendData();
+			USART2_DMA_SendData(USART_SendBuffer, len);
 		}
 		//send heart beat  1Hz
 		if(SYS_TIME/1000000 == count)
@@ -59,7 +59,7 @@ void mavlink_message(void)
 						custom_mode,
 						mavlink_system.state);
 			len = mavlink_msg_to_send_buffer(USART_SendBuffer, &msg);			
-			USART2_DMA_SendData();
+			USART2_DMA_SendData(USART_SendBuffer, len);
 		}
 			
 		

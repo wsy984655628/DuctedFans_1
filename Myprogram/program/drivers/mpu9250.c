@@ -58,9 +58,9 @@ void MPU9250_INT_GPIO_Config(void)
 void MPU9250_DataRegion_Config(void)
 {
 	int i;
-	for (i=0;i<14,i++)
+	for(i=0;i<14;i++)
 		MPU9250_OriData_Cache[i] = 0;
-	for (i=0;i<7;i++)
+	for(i=0;i<7;i++)
 		MPU9250_Data_Cache[i] = 0;
 }
 unsigned char MPU9250_WriteReg(unsigned char RegAddr , unsigned char Data)
@@ -74,9 +74,10 @@ unsigned char MPU9250_WriteReg(unsigned char RegAddr , unsigned char Data)
 }
 void MPU9250_GetData(void)
 {
+	int i;
 	MPU9250_Lower_CS();
 	SPI4_SendByte(0xBB);	//where can i find the 0xbb
-	for (i=0;i<14;i+=)
+	for(i=0;i<14;i++)
 		MPU9250_OriData_Cache[i] = SPI4_SendByte(0x00);
 	MPU9250_Raise_CS();
 	

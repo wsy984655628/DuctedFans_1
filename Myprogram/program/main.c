@@ -21,8 +21,12 @@ int main()
 	AT25512_SPI_GPIO_Config();	
 	PwmInit();
 	Timer5Init();
-	Receive_Config();
 	Timer3Init();
+	Receive_Config();
+	SPI4_Config();
+	MS5803_Config();
+	MPU9250_Config();
+	mavlink_int();
 	
 	while(1);
 }
@@ -43,10 +47,6 @@ void MainInterrupt(void)
 //			LED1(OFF);
 //			Delay(0xFFFFF);
 //		}
-	
-	
-//	Get_Mavlink_Info();
-//	Send_Mavlink_Info();
 }
 
 static void Delay(__IO uint32_t nCount)	 

@@ -11,7 +11,7 @@ extern uint8_t USART_SendBuffer[USART_SendBuffer_Size];
 extern uint8_t USART_ReceiveBuffer[USART_SendBuffer_Size+100];
 
 void USART2_DT_Config(void);
-void USART2_DMA_SendData(void);
+void USART2_DMA_SendData(uint8_t *pAddr,uint32_t len);
 void USART2_DMA_ReceiveData(void);
 
 void USART2_Print( const char *str );
