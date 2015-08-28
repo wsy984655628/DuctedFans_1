@@ -96,3 +96,9 @@ void MPU9250_Filter(void)
 {
 	
 }
+
+void EstimateAttitude(void)
+{
+	
+}
+

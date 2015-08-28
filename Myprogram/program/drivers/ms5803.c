@@ -227,3 +227,8 @@ void MS5803_GetData(void)
 	P = ((MS5803_DataCache[0]*SENS>>21) - OFF)>>15;
 	
 }
+
+void EstimateHeight(void)
+{
+	
+}

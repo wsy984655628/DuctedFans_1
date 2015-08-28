@@ -582,6 +582,16 @@
               <FileType>5</FileType>
               <FilePath>..\program\drivers\struct_all.h</FilePath>
             </File>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\program\drivers\control.c</FilePath>
+            </File>
+            <File>
+              <FileName>control.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\program\drivers\control.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

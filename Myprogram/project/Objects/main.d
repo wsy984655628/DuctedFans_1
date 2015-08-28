@@ -19,10 +19,10 @@
 .\objects\main.o: ..\libraries\Drivers\inc\stm32f4xx_usart.h
 .\objects\main.o: ..\program\main.h
 .\objects\main.o: ..\program\stm32f4xx_it.h
-.\objects\main.o: ..\program\drivers\led.h
-.\objects\main.o: ..\program\drivers\usart.h
 .\objects\main.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: D:\Program Files\Keil v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: ..\program\drivers\led.h
+.\objects\main.o: ..\program\drivers\usart.h
 .\objects\main.o: ..\program\drivers\pwm.h
 .\objects\main.o: ..\program\drivers\receive.h
 .\objects\main.o: ..\program\drivers\w25q16.h
@@ -30,6 +30,7 @@
 .\objects\main.o: ..\program\drivers\ms5803.h
 .\objects\main.o: ..\program\drivers\mpu9250.h
 .\objects\main.o: ..\program\drivers\struct_all.h
+.\objects\main.o: ..\program\drivers\control.h
 .\objects\main.o: ..\program\drivers\MavlinkProtocol.h
 .\objects\main.o: ..\program\mavlink\common\mavlink.h
 .\objects\main.o: ..\program\mavlink\common\version.h

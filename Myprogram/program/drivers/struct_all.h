@@ -3,6 +3,14 @@
 
 #include "stm32f4xx.h"
 
+struct _MainInt_Time
+{
+	uint32_t EntranceT;
+	uint32_t ExitT;
+	uint32_t gap;
+};
+extern struct _MainInt_Time MainInt_Time;
+
 struct _out_angle
 {
 	unsigned char flag;

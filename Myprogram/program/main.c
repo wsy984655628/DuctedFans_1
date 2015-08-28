@@ -1,6 +1,8 @@
 #include "stm32f4xx_conf.h"
 #include "main.h"
 #include "stm32f4xx_it.h"
+#include "stdio.h"
+#include "string.h"
 #include "led.h"
 #include "usart.h"
 #include "pwm.h"
@@ -10,10 +12,20 @@
 #include "ms5803.h"
 #include "mpu9250.h"
 #include "struct_all.h"
+#include "control.h"
 #include "MavlinkProtocol.h"
+
+uint32_t MainTntCounter=0;
 
 static void Delay(__IO u32 nCount); 
 int main()
+{
+	System_Config();
+	
+	while(1);
+}
+
+void System_Config(void)
 {
 	LED_GPIO_Config();
 	USART2_DT_Config();
@@ -26,13 +38,35 @@ int main()
 	SPI4_Config();
 	MS5803_Config();
 	MPU9250_Config();
-	mavlink_int();
-	
-	while(1);
+	mavlink_int();	
 }
 
-void MainInterrupt(void)
+void MainInterrupt(void) //100Hz
 {
+	MainInt_Time.EntranceT = SYS_TIME;
+	MainTntCounter++;
+	
+	GetReceiverInfo();
+	
+	MPU9250_GetData();
+	EstimateAttitude();
+	
+	//MS5803_GetData();
+	//EstimateHeight();
+	
+	PositionControl();
+	
+	HeightControl();
+	
+	Pidcontrol();
+	
+	DealCommunication();
+	
+	MainInt_Time.ExitT = SYS_TIME;
+	MainInt_Time.gap = MainInt_Time.ExitT - MainInt_Time.EntranceT;
+	
+	
+	
 //	uint8_t test[2]={0x05,0x09};
 //	uint8_t test2[2]={0x01,0x08};
 		
@@ -47,6 +81,11 @@ void MainInterrupt(void)
 //			LED1(OFF);
 //			Delay(0xFFFFF);
 //		}
+}
+
+void DealCommunication(void);
+{
+	//mavlink_message();
 }
 
 static void Delay(__IO uint32_t nCount)	 

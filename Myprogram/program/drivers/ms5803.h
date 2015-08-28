@@ -24,6 +24,7 @@ unsigned long MS5803_ReadTemperature(void);
 unsigned long MS5803_Pressure_Filter(void);
 unsigned long MS5803_Temperature_Filter(void);
 void MS5803_GetData(void);
+void EstimateHeight(void);
 
 #define MS5803_Cmd_RESET		0x1E
 #define	MS5803_Cmd_CONV_P256	0x40

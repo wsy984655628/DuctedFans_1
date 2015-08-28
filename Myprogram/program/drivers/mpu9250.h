@@ -12,6 +12,7 @@ void MPU9250_DataRegion_Config(void);
 unsigned char MPU9250_WriteReg(unsigned char RegAddr , unsigned char Data);
 void MPU9250_GetData(void);
 void MPU9250_Filter(void);
+void EstimateAttitude(void);
 
 extern unsigned char MPU9250_OriData_Cache[14];
 extern unsigned short MPU9250_Data_Cache[7];

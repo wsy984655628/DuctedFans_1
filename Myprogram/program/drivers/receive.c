@@ -4,6 +4,7 @@ uint8_t LineFalling[5]={0};
 uint32_t	LineFallingTime[5]={0};
 uint32_t	LineRisingTime[5]={0};
 uint16_t	LineHT[5]={0};
+uint16_t	RC[5] = {1000,1000,1000,1000,1000};
 
 void Receive_Config(void)
 {
@@ -35,4 +36,14 @@ void Receive_Config(void)
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_Init(&NVIC_InitStructure);
+}
+
+void GetReceiverInfo(void)
+{
+	int i;
+	if (LineHT[0] > 1000)
+	{
+		for(i=0;i<5;i++)
+		RC[i] = LineHT[i];
+	}
 }
